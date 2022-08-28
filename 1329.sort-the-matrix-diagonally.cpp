@@ -7,6 +7,7 @@
 // @lc code=start
 class Solution {
 public:
+    //Uses Count Sort Technique to sort the diagonal of the matrix.
     void sortVector(vector<vector<int>>& mat, int r, int c){
         int m=mat.size();  //row count
         int n=mat[0].size();  //column count
@@ -22,7 +23,7 @@ public:
 
         i=r, j=c;  //resetting values again.
 
-        for(int k=1; k<values.size(); k++){
+        for(int k=0; k<values.size(); k++){
             while(values[k]>0){ //now to put the elements in a sorted way
                 mat[i][j]=k;    //matrix indices were reset in the previous step. The index of the value vector is assigned to the matrix position
                 values[k]--;    //decrements the counter at k position in the values vector.
