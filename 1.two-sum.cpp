@@ -24,9 +24,9 @@ public:
         mp = nums;
         int count = 0;
     
-        for(int i=nums.size()-1; i>=0; i--){
+        for(int i=0; i<nums.size(); i++){
             int num = target-nums[i];
-            for(int j=nums.size()-1; j>=0; j--){
+            for(int j=0; j<nums.size(); j++){
                 if(mp[j]==num && j!=i){
                     v.push_back(j);
                     count++;
