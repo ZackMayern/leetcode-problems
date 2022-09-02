@@ -20,22 +20,16 @@ public:
         // }
         // return v;
 
-        vector<int> mp, v;
-        mp = nums;
-        int count = 0;
-    
+        vector<int> result;
+        unordered_map<int,int> mp;
         for(int i=0; i<nums.size(); i++){
-            int num = target-nums[i];
-            for(int j=0; j<nums.size(); j++){
-                if(mp[j]==num && j!=i){
-                    v.push_back(j);
-                    count++;
-                }
+            if(mp.find(target-nums[i])!=mp.end()){
+                result.push_back(mp[target-nums[i]]);
+                result.push_back(i);
             }
-            if(count==2)
-                break;
+            mp[nums[i]]=i;
         }
-        return v;
+        return result;
     }
 };
 // @lc code=end
