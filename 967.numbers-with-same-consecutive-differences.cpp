@@ -14,9 +14,9 @@ public:
         }
         int lastDigit = num%10;
         if(lastDigit >= k) 
-            dfs(num*10+lastDigit-k, n-1, k, results);
+            dfs(num*10+(lastDigit-k), n-1, k, results);
         if(lastDigit+k < 10 && k>0) 
-            dfs(num*10+lastDigit+k, n-1, k, results);
+            dfs(num*10+(lastDigit+k), n-1, k, results);
     }
     vector<int> numsSameConsecDiff(int n, int k) {
         vector<int> results;
