@@ -3,6 +3,7 @@
         "unordered_map": "cpp",
         "string": "cpp",
         "functional": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "vector": "cpp"
     }
 }
