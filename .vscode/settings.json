@@ -5,6 +5,7 @@
         "functional": "cpp",
         "*.tcc": "cpp",
         "vector": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "string_view": "cpp"
     }
 }
